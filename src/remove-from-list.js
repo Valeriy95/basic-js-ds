@@ -27,51 +27,6 @@ const { NotImplementedError } = require('../extensions/index.js');
 
 function removeKFromList( l, k ) {
   throw new NotImplementedError('Not implemented');
-    function removeAt(position) {
-       if(position < 0 || position >= l.length) {
-          return;
-       }
- 
-       let current = l.value;
-    
-       if(position === 0) {
-          l.value = current.next;
-       } else {
-          let prev = null;
-          let index = 0;
- 
-       while (index < position) {
-          prev = current;
-          current = current.next;
-          index++;
-       }
- 
-       prev.next = current.next;
-       }
- 
-      //  l.length--;
-       return current.value;
-    }
- 
-    function indexOf(element) {
-       let current = l.value;
-       let index = 0;
- 
-       while(current) {
-          if(current.value === element) {
-             return index;
-          }
- 
-          current = current.next;
-          index++;
-       }
- 
-       return -1;
-    }
- 
-    removeAt(indexOf(k))
-    return l;
-    // l.removeAt(l.indexOf(k))
 }
 
 
